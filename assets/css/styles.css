@@ -1,0 +1,435 @@
+/* bright green #f5f6f7 */
+/* darker green #88b04b */
+/* dark #2a333c */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Poppins;
+    box-sizing: border-box;
+}
+body{
+    background-color: #f3f7ee;
+}
+header{
+    width: 100%;
+    height: 60px;
+    background-color: #88b04b;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 100px;
+}
+.menu{
+    display: none;
+}
+.logo{
+    color: #fff;
+    font-size: 30px;
+    display: inline-flex;
+    align-items: center;
+}
+.logo svg{
+    padding-right: 5px;
+    height: 30px;
+    width: 30px;
+}
+.nav-bar ul{
+    list-style: none;
+    display: flex;
+}
+.nav-bar ul li a{
+    display: block;
+    color: #f3f7ee;
+    font-size: 18px;
+    padding: 10px 22px;
+    border-radius: 32px;
+    text-decoration: none;
+    margin: 0 5px 0 5px;
+    transition: 1s;
+}
+
+.nav-bar ul li a:hover{
+    color: #0f1505;
+    background-color: #f3f7ee;
+}
+
+.nav-bar ul li a:active{
+    color: #0f1505;
+    background-color: #f3f7ee;
+}
+
+.container-open {
+    position: relative;
+    height: 600px; 
+    width: 100%;
+    box-sizing: border-box;
+    overflow: hidden; 
+    background-color: #fff;
+}
+
+.text-logo {
+    position: absolute;
+    left: 150px; 
+    top: 150px;
+    z-index: 5; 
+    color: #2a333c;
+    font-size: 110px;
+    text-align: left;
+}
+
+.text-logo .main-text{
+    display: flex;
+    align-items: center;
+}
+
+.text-logo span {
+    font-size: 25px;
+    font-weight: 300;
+    position: absolute;
+    top: 140px; 
+    left: 7px;
+    margin-top: 20px; 
+}
+
+.text-logo svg {
+    padding-right: 5px;
+    height: 110px;
+    width: 110px;
+}
+
+.img-logo {
+    position: absolute;
+    width: auto;
+    height: 100%;
+    left: 35%;
+    z-index: 1; 
+}
+
+.vegetables, .fruits, .herbs {
+    margin: 40px 0;
+}
+.vegetables-container, .fruits-container, .herbs-container{
+    display: flex;
+    align-items: center;
+}
+h2{
+    color: #0f1505;
+    font-size: 30px;
+    font-weight: 300;
+    padding: 0 20px;
+}
+.slider{
+    display: flex;
+    gap: 30px;
+    padding: 20px;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    width: 100%;
+}
+.slide{
+    width: 300px; 
+    height: 420px; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #fff;
+    gap: 15px;
+    border-radius: 30px;
+    box-shadow: 0 0 10px 1px #566f32;
+    font-size: 20px;
+    flex-shrink: 0;
+    transition: width 1s, height 1s, margin 1s; 
+    
+}
+.slide:hover{
+    width: 320px;
+    height: 440px;
+    margin: -10px; 
+}
+.price{
+    font-size: 18px;
+    color: gray;
+}
+.slide img{
+    height: 220px;
+    width: 220px;
+    margin-top: -15px;
+}
+.slide:hover img{
+    animation-name: img-animate;
+    animation-duration: 0.7s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+@keyframes img-animate {
+    from {
+        transform: rotate(10deg);
+    }
+    to {
+        transform: rotate(-10deg);
+    }
+}
+.card-btns{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.card-btns .quantity{
+    height: 43px;
+    border: #88b04b solid 2px;
+    text-align: center;
+    border-radius: 25px;
+    font-size: 15px;
+    padding: 5px;
+}
+.card-btns .quantity:hover{
+    border: #2a333c solid 2px;
+}
+.cart-btn{
+    background-color: #88b04b;
+    border: none;
+    border-radius: 25px;
+    padding: 10px;
+    font-size: 15px;
+    color: #fff;
+}
+.cart-btn:hover{
+    background-color: #2a333c;
+}
+.slider-btn{
+    background-color: transparent;
+    border: none;
+    height: 35px;
+    width: 35px;
+    overflow: visible;
+    flex-shrink: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    color: #000;
+    margin: 0 5px;
+}
+.slider-btn:hover{
+    background-color: #88b04b;
+    color: #fff;
+}
+footer {
+    height: 400px;
+    width: 100%;
+    position: relative;
+    background-color: #88b04b;
+    margin-top: 200px;
+    color: #fff;
+}
+
+.footer-container {
+    text-decoration: none;
+    font-size: 18px;
+    position: relative; 
+    top: 100px;
+    display: flex; 
+    justify-content: center;
+    align-items: flex-start;
+    gap: 290px;
+}
+footer h3{
+    font-size: 40px;
+}
+.shop-connect  ul{
+    list-style: none; 
+}
+.shop-connect  ul, .email-connect p, .shop-connect  ul li, .follow-connect > *, .email-connect input, .email-connect button{
+    margin-top: 10px;
+}
+footer a:visited{
+    color: #fff;
+    text-decoration: none;
+}
+.email-connect{
+    display: flex;
+    flex-direction: column;
+}
+.email-connect input, .email-connect button{
+    height: 30px;
+    width: 305px;
+    border: none;
+    padding: 10px;
+}
+.email-connect button{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    background-color: #566f32;
+}
+.email-connect button:hover{
+    background-color: #2a333c ;
+}
+.social-connect-container{
+    display: flex;
+    gap: 25px;
+}
+.social-connect{
+    height: 20px;
+    width: 20px;
+}
+footer a:hover{
+    color: #2a333c;
+}
+.social-connect svg:hover{
+    stroke: #2a333c;
+}
+@media (max-width: 1250px){
+    header{
+        padding: 0 48px;
+    }
+    .container-open{
+        height: 500px;
+    }
+    .text-logo{
+        top: 150px;
+        left: 70px;
+    }
+    .text-logo svg{
+        height: 70px;
+        width: 70px;
+    }
+    .text-logo{
+        font-size: 90px;
+    }
+    .text-logo span{
+        top: 110px;
+        font-size: 25px;
+    }
+    .img-logo{
+        left: 26%;
+    }
+    footer h3{
+        font-size: 35px;
+    }
+    .footer-container{
+        gap: 120px;
+        font-size: 18px;
+    }
+    .email-connect input, .email-connect button{
+        width: 250px;
+    }
+}
+
+@media (max-width: 835px){
+    header{
+        display: flex;
+        flex-direction: column;
+        width: min-content;
+        height: auto;
+        align-items: left;
+        padding: 0 20px;
+        margin-bottom: 100;
+    }
+    .logo{
+        display: flex;
+        flex-direction: column;
+        align-items: left;
+        margin-top: 5px;
+        font-size: 18px;
+    }
+    .menu{
+        display: block;
+        position: absolute;
+        top: 90px;
+    }
+    .menu .menu-line{
+        width: 30px;
+        height: 3px;
+        background-color: #f3f7ee;
+        border-radius: 10px;
+        margin: 6px 0;
+    }
+    .nav-bar{
+        display: none;
+        height: 100%;
+        width: 100%;
+        position: relative;
+        top: 80px;
+        left: 0;
+        background-color: #88b04b;
+        transition: 0.5s;
+        overflow: hidden;
+        margin-bottom: 100%;
+    }
+    .nav-bar.active{
+        display: block;
+        width: fit-content;
+    }
+    .nav-bar ul {
+        display: block;
+        width: fit-content;
+        text-align: center;
+        transition: 0.5s;
+        opacity: 0;
+        height: 100%; 
+        margin: 0; 
+        padding: 0; 
+    }
+    .nav-bar.active ul{
+        opacity: 1;
+    }
+    .nav-bar ul li a{
+        margin-bottom: 12px;
+    }
+    body{
+        display: flex;
+    }
+    .main{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+    .container-open{
+        height: 400px;
+    }
+    .text-logo{
+        top: 100px;
+        left: 40px;
+    }
+    .text-logo svg{
+        height: 70px;
+        width: 70px;
+    }
+    .text-logo{
+        font-size: 70px;
+    }
+    .text-logo span{
+        top: 90px;
+        font-size: 20px;
+    }
+    .img-logo{
+        left: 20%;
+    }
+    .slide{
+        height: 370px;
+        width: 260px;
+    }
+    .slide:hover{
+        width: 280px;
+        height: 390px;
+        margin: -10px; 
+    }
+    .slide img{
+        height: 170px;
+        width: 170px;
+    }
+    footer h3{
+        font-size: 25px;
+    }
+    .footer-container{
+        gap: 70px;
+        font-size: 15px;
+    }
+    .email-connect input, .email-connect button{
+        width: 250px;
+    }
+}
